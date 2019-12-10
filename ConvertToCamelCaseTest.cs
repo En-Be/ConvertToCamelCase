@@ -12,4 +12,17 @@ public class Tests
         string s2 = "why-hello-dear";
         Assert.AreEqual("whyHelloDear", Converter.ToCamelCase(s2));
     }
+
+    [Test]
+    public void ConvertsToCamelCaseWithFirstCapital()
+    {
+        string s1 = "Hiya-luv";
+        Assert.AreEqual("HiyaLuv", Converter.ToCamelCase(s1));
+    }
+
+    [Test]
+    public void ConvertsUnderscoreSeperatedToCamelCase()
+    {
+        
+    }
 }
