@@ -1,18 +1,12 @@
 using NUnit.Framework;
 
-namespace ConvertToCamelCase
-{
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
+public class Tests
+{
+    [Test]
+    public void ConvertsDashSeperatedToCamelCase()
+    {
+        string s1 = "hello-there-you";
+        Assert.AreEqual("helloThereYou", Converter.ToCamelCase(s1));
     }
 }
