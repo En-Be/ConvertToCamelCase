@@ -14,7 +14,7 @@ public class Tests
     }
 
     [Test]
-    public void ConvertsToCamelCaseWithFirstCapital()
+    public void ConvertsDashSeperatedToCamelCaseWithFirstCapital()
     {
         string s1 = "Hiya-luv";
         Assert.AreEqual("HiyaLuv", Converter.ToCamelCase(s1));
@@ -23,6 +23,7 @@ public class Tests
     [Test]
     public void ConvertsUnderscoreSeperatedToCamelCase()
     {
-        
+        string s1 = "allo_mate";
+        Assert.AreEqual("alloMate", Converter.ToCamelCase(s1));
     }
 }
