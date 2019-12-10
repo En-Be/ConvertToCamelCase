@@ -6,7 +6,7 @@ public static class Converter
     public static string ToCamelCase(string arg)
     {
         string result = "";
-        string[] splitArg = arg.Split('-');
+        string[] splitArg = arg.Split('-', '_');
         for(int i = 0; i < splitArg.Length; i++)
         {
             StringBuilder sb = new StringBuilder(splitArg[i]);
