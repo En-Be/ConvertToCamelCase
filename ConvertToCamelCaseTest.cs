@@ -26,4 +26,11 @@ public class Tests
         string s1 = "allo_mate";
         Assert.AreEqual("alloMate", Converter.ToCamelCase(s1));
     }
+
+    [Test]
+    public void ConvertsUnderscoreSeperatedToCamelCaseWithFirstCapital()
+    {
+        string s1 = "What_mate_as_if";
+        Assert.AreEqual("WhatMateAsIf", Converter.ToCamelCase(s1));
+    }
 }
