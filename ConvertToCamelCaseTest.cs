@@ -8,5 +8,8 @@ public class Tests
     {
         string s1 = "hello-there-you";
         Assert.AreEqual("helloThereYou", Converter.ToCamelCase(s1));
+
+        string s2 = "why-hello-dear";
+        Assert.AreEqual("whyHelloDear", Converter.ToCamelCase(s2));
     }
 }
