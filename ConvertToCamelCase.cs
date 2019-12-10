@@ -1,6 +1,14 @@
 using System;
 using System.Text;
 
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Converter.ToCamelCase(args[0]));
+    }
+}
+
 public static class Converter
 {
     public static string ToCamelCase(string arg)
