@@ -1,5 +1,5 @@
 using NUnit.Framework;
-
+using System;
 
 public class Tests
 {
@@ -32,5 +32,12 @@ public class Tests
     {
         string s1 = "What_mate_as_if";
         Assert.AreEqual("WhatMateAsIf", Converter.ToCamelCase(s1));
+    }
+
+    [Test]
+    public void MustBeInvokedWithInput()
+    {
+        string s1 = "";
+        Assert.Throws<ArgumentException>(() => Converter.ToCamelCase(s1));
     }
 }
